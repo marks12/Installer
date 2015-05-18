@@ -21,7 +21,7 @@
      "require": {
           "php": ">=5.3.3",
 		  "zendframework/zendframework":		"2.4.*",
-          "marks12/tsv-users":					"0.*",
+          "marks12/tsv-users":					"*",
           "marks12/tsv-directory":				"*",
 		  "zendframework/zftool":				"dev-master",
 		  "zendframework/zend-developer-tools":	"dev-master"
