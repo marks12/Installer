@@ -12,6 +12,9 @@ namespace Installer;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
+use Zend\Console\Adapter\AdapterInterface as Console;
 
 class Module implements AutoloaderProviderInterface
 {
@@ -19,7 +22,7 @@ class Module implements AutoloaderProviderInterface
     {
         return array(
             'Zend\Loader\ClassMapAutoloader' => array(
-                __DIR__ . '/autoload_classmap.php',
+                __DIR__ . '/../../autoload_classmap.php',
             ),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
@@ -32,7 +35,7 @@ class Module implements AutoloaderProviderInterface
 
     public function getConfig()
     {
-        return include __DIR__ . '/config/module.config.php';
+        return include __DIR__ . '/../../config/module.config.php';
     }
 
     public function onBootstrap(MvcEvent $e)
@@ -42,5 +45,13 @@ class Module implements AutoloaderProviderInterface
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+    }
+    
+    public function getConsoleUsage(Console $console){
+    	return array(
+    			'configure'		=> 'Configure all standart modules',
+
+    			array( 'Use this commands for manage users and roles in TsvUsers module' ),
+    	);
     }
 }

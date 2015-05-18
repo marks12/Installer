@@ -47,4 +47,19 @@ return array(
             'Installer' => __DIR__ . '/../view',
         ),
     ),
+	'console' => array(
+			'router' => array(
+					'routes' => array(
+							'configure' => array(
+									'options' => array(
+											'route'    => 'configure',
+											'defaults' => array(
+													'controller' => 'Installer\Controller\Installer',
+													'action'     => 'configure'
+											),
+									),
+							),
+					),
+			),
+	),
 );

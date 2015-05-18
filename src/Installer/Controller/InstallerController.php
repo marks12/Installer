@@ -10,6 +10,12 @@
 namespace Installer\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\Form\Element\Password;
+use Zend\Console\Request as ConsoleRequest;
+use Zend\Console\Adapter\AdapterInterface as Console;
+use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
+use Zend\Console\ColorInterface as color;
+use Zend\Text\Table\Table as Table;
 
 class InstallerController extends AbstractActionController
 {
@@ -23,5 +29,13 @@ class InstallerController extends AbstractActionController
         // This shows the :controller and :action parameters in default route
         // are working when you browse to /installer/installer/foo
         return array();
+    }
+    
+    public function configureAction()
+    {
+    	$console = $this->getServiceLocator()->get('console');
+    	$console->write( "Start install operation \n=============\n", color::RED);
+    	
+    	return '';
     }
 }
