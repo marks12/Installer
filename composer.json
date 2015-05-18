@@ -23,6 +23,8 @@
 		  "zendframework/zendframework":		"2.4.*",
           "marks12/tsv-users":					"*",
           "marks12/tsv-directory":				"*",
+          "marks12/tsv-functions":				"*",
+          "marks12/tsv-news":					"*",
 		  "zendframework/zftool":				"dev-master",
 		  "zendframework/zend-developer-tools":	"dev-master"
      },
