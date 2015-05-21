@@ -1,0 +1,20 @@
+
+<br>
+<br>
+<div class="container">
+	<p>
+	<div style="float:left; padding-right:16px;"><?php echo $this->gravatar($this->zfcUserIdentity()->getEmail()) ?></div>
+	<h3 style="margin-top:0px;">Здравствуйте, <?php echo $this->zfcUserDisplayName() ?>!</h3>
+
+	<br>
+	<div>	  
+	  <a href="<?php echo $this->url('zfcuser/logout') ?>" class="btn btn-warning btn-xs" >Выход</a>
+	  <?php if($this->isAllowed('controller/ZfcAdmin\Controller\AdminController')){?>
+	  <a href="<?php echo $this->url('zfcadmin') ?>" class="btn btn-success btn-xs" >Администрирование</a>
+	  <?php }?>
+	</div>
+	
+	<div style="clear:both;"><br></div>
+	</p>
+</div>
+

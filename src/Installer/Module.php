@@ -51,7 +51,8 @@ class Module implements AutoloaderProviderInterface
     	return array(
     			'configure'		=> 'Configure all standart modules',
 
-    			array( 'Use this commands for manage users and roles in TsvUsers module' ),
+    			array( '  Use this commands for create standart configurations for modules' ),
+    			array( '  Please visit http://github.com/marks12/Installer for read more information' ),
     	);
     }
 }

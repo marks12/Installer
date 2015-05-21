@@ -1,0 +1,7 @@
+# Копируем pagination файл в папку шаблонов приложения
+copy:data/bjyauthorize.global.php:config/autoload/bjyauthorize.global.php:1:1
+copy:data/OneRangCatalog.local.php:config/autoload/OneRangCatalog.local.php:1:1
+copy:data/zenddevelopertools.local.php:config/autoload/zenddevelopertools.local.php:1:1
+copy:data/tsvusers.local.php:config/autoload/tsvusers.local.php:1:1
+copy:data/zfc-admin:module/Application/view/zfc-admin:1:1
+copy:data/zfc-user:module/Application/view/zfc-user:1:1
